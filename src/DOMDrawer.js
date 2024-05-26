@@ -1,12 +1,23 @@
-export default function projectTodosDOM(project){
-    console.log(project.projectTodos[0]);
-    // project.forEach((element), function() {
-    //     listItem(element);
-    // });
+import project from "./project";
+export let activeProject;
 
+
+export default function projectTodosDOM(project){
     for (let i = 0; i<project.projectTodos.length;i++){
         listItem(project.projectTodos[i]);
     }
+}
+export function projectName(projectName, projectID) {
+    const nav = document.querySelector("#nav");
+    const projectBtn = document.createElement("button");
+    projectBtn.textContent = projectName;
+    nav.append(projectBtn);
+
+    projectBtn.addEventListener("click", () => {
+        console.log(`${projectName} with ${projectID}` );
+        activeProject = projectID;
+        return projectID;
+    });//Add eventlistener to newly created button. Fires content every time button is clicked
 }
 
 function listItem (obj){
