@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+// import "./style.css";
+// import * as css from "style.css";
 
 module.exports = {
   entry: {
@@ -20,5 +22,13 @@ module.exports = {
       template: "src/index.html",
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
   
 };
