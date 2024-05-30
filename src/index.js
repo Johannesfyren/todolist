@@ -3,6 +3,8 @@ import { project, projectArray} from "./project";
 import projectTodosDOM from "./DOMDrawer";
 import { projectName } from "./DOMDrawer";
 import { activeProject, drawProjectTodos} from "./DOMDrawer";
+import "./style.css";
+import * as css from "./style.css";
 
 
 //deafualt todo start

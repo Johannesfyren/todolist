@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container{
+    display: flex;
+    gap: 20px;
+}
+li{
+    flex: 2;
+    width: 80%;
+    height: 100px;
+    background-color: aliceblue;
+    list-style-type: none;
+    margin: 10px 0px;
+}
+#content{
+    flex: 4;
+}
+#nav{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#nav button{
+    height: 20px;
+    width: 50px;
+    background-color: beige;
+}
